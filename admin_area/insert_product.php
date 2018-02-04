@@ -1,6 +1,10 @@
 <!DOCTYPE>
 <?php
 include("includes/db.php");
+if(!isset($_SESSION['user_email'])){
+		echo"<script>window.open('login.php?not_admin=you are not admin','_self');</script>";
+	}
+	else{
 
 ?>
 
@@ -14,7 +18,7 @@ include("includes/db.php");
 	<body bgcolor="skyblue">
 	
 		<form action="insert_product.php" method="post" enctype="multipart/form-data">
-			<table align="center" width="750" border="2" bgcolor="orange">
+			<table align="center" width="795" border="2" bgcolor="#187eae">
 			`	<tr align="center">
 					<td colspan="8"><h2>Insert new post here</h2></td>
 				</tr>
@@ -120,10 +124,11 @@ include("includes/db.php");
 		$insert_pro = mysqli_query($con,$insert_product);
 		if($insert_pro){
 			echo "<script>alert('product has been inserted')</script>";
-			echo "<script>window.open('insert_product.php','_self')</script>";
+			echo "<script>window.open('index.php?insert_product','_self')</script>";
 		}
 		
 	}
 
 
 ?>
+	<?php } ?>

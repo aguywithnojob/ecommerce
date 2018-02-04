@@ -34,9 +34,9 @@ include("includes/db.php");
 						<li><a href="index.php">Home</a></li>
 						<li><a href="all_products.php">All Products</a></li>
 						<li><a href="customer/my_account.php">My Account</a></li>
-						<li><a href="#">Sign up</a></li>
+						<li><a href="customer_register.php">Sign up</a></li>
 						<li><a href="cart.php">Shopping cart</a></li>
-						<li><a href="#">Contact us</a></li>
+						<li><a href="contact_us.php">Contact us</a></li>
 					</ul>
 				
 				<div id="form">
